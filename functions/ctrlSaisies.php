@@ -10,6 +10,6 @@ function ctrlSaisies($saisie){
     // Suppression des antislashs d'une chaîne
     $saisie = stripslashes($saisie);
     // Conversion des caractères spéciaux en entités HTML
-    $saisie = htmlentities($saisie);
+
     return $saisie;
 }
