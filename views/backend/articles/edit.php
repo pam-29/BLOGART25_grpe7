@@ -35,14 +35,14 @@ $article = sql_select($query, "*") [0];
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Modification des titres</h1>
+            <h1>Modification des articles</h1>
         </div>
         <div class="col-md-12">
-            <!-- Form to create a new statut -->
-            <form action="<?php echo ROOT_URL . '/api/karticles/update.php' ?>" method="post">
+            <!-- Form to create a new article -->
+            <form action="<?php echo ROOT_URL . '/api/articles/update.php' ?>" method="post">
                 <div class="form-group">
                     <label for="numArt">Numero</label>
-                    <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />
+                    
                     <input id="numArt" name="numArt" class="form-control" type="text" value="<?php echo($numArt); ?>" />
 
                     <label for="libTitrArt">Titre</label>
@@ -67,7 +67,7 @@ $article = sql_select($query, "*") [0];
 
                     <label for="parag1Art">Paragraphe 1</label>
                     <div>
-                    <textarea name="parag1Art" id="parag1Art" rows="4" cols="150"><?php echo($parag1Art); ?></textarea>
+                    <textarea name="parag1Art" id="parag1Art" rows="4" cols="130"><?php echo($parag1Art); ?></textarea>
                     </div>
 
                     <label for="libSsTitr1Art">Sous-Titre 1</label>
@@ -76,7 +76,7 @@ $article = sql_select($query, "*") [0];
 
                     <label for="parag2Art">Paragraphe 2</label>
                     <div>
-                    <textarea name="parag2Art" id="parag2Art" rows="4" cols="150"><?php echo($parag2Art); ?></textarea>
+                    <textarea name="parag2Art" id="parag2Art" rows="4" cols="130"><?php echo($parag2Art); ?></textarea>
                     </div>
 
                     <label for="libSsTitr2Art">Sous-Titre 2</label>
@@ -85,7 +85,7 @@ $article = sql_select($query, "*") [0];
 
                     <label for="parag3Art">Paragraphe 3</label>
                     <div>
-                    <textarea name="parag3Art" id="parag3Art" rows="4" cols="150"><?php echo($parag3Art); ?></textarea>
+                    <textarea name="parag3Art" id="parag3Art" rows="4" cols="130"><?php echo($parag3Art); ?></textarea>
                     </div>
 
                     <label for="libConclArt">Conclusion</label>

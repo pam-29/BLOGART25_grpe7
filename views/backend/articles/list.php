@@ -4,8 +4,7 @@ include '../../../header.php'; // contains the header and call to config.php
 //Load all article
 $query = "ARTICLE 
             INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem
-            INNER JOIN MOTCLEARTICLE ON ARTICLE.numArt = MOTCLEARTICLE.numArt
-            INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle";
+            ";
 
 
 $article = sql_select($query, "*");
@@ -32,14 +31,22 @@ $article = sql_select($query, "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($article as $articles){ ?>
+                    <?php foreach($article as $articles){ 
+                        $query = "MOTCLE INNER JOIN MOTCLEARTICLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle
+                        ";
+            
+            
+                        $motscles = sql_select($query, "*", "numArt = ".$articles['numArt']);
+                        ?>
                         <tr>
                             <td><?php echo($articles['numArt']); ?></td>
                             <td><?php echo($articles['dtCreaArt']); ?></td>
                             <td><?php echo($articles['libTitrArt']); ?></td>
                             <td><?php echo($articles['libChapoArt']); ?></td>
                             <td><?php echo($articles['libAccrochArt']); ?></td>
-                            <td><?php echo($articles['libMotCle']); ?></td>
+                            <td><?php foreach( $motscles as  $motcle){
+                                echo($motcle['libMotCle']) . "<br>";
+                            } ?></td>
                             <td><?php echo($articles['libThem']); ?></td>
                             <td>
                                 <a href="edit.php?numArt=<?php echo($articles['numArt']); ?>" class="btn btn-primary">Edit</a>
