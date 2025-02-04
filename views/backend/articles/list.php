@@ -9,9 +9,7 @@ $query = "ARTICLE
 
 $article = sql_select($query, "*");
 
-
 ?>
-
 <!-- Bootstrap default layout to display all article in foreach -->
 <div class="container">
     <div class="row">
@@ -34,9 +32,7 @@ $article = sql_select($query, "*");
                     <?php foreach($article as $articles){ 
                         $query = "MOTCLE INNER JOIN MOTCLEARTICLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle
                         ";
-            
-            
-                        $motscles = sql_select($query, "*", "numArt = ".$articles['numArt']);
+$motscles = sql_select($query, "*", "numArt = ".$articles['numArt']);
                         ?>
                         <tr>
                             <td><?php echo($articles['numArt']); ?></td>

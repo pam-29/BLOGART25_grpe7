@@ -10,7 +10,7 @@ include '../../../header.php';
         </div>
         <div class="col-md-12">
             <!-- Form to create a new statut -->
-            <form action="<?php echo ROOT_URL . '/api/statuts/create.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/keywords/create.php' ?>" method="post">
                 <div class="form-group">
                     <label for="libMotCle">Nom du Mot Cle</label>
                     <input id="libMotCle" name="libMotCle" class="form-control" type="text" autofocus="autofocus" />
