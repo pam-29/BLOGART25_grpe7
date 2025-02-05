@@ -57,7 +57,7 @@ $thematique = sql_select('THEMATIQUE', '*', "numThem = '$numThem'")[0];
                 <div class="form-group">
                     <label for="numArt">Numero</label>
                         <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />
-                        <input id="numArt" name="numArt" class="form-control" type="text" value="<?php echo($numArt); ?>" />
+                        <input id="numArt" name="numArt" class="form-control" disabled type="text" value="<?php echo($numArt); ?>" />
 
                     <label for="libTitrArt">Titre</label>
                         <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />
@@ -65,11 +65,11 @@ $thematique = sql_select('THEMATIQUE', '*', "numThem = '$numThem'")[0];
 
                     <label for="dtCreaArt">Date Création</label>
                         <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />
-                        <input id="dtCreaArt" name="dtCreaArt" class="form-control" type="text" value="<?php echo($dtCreaArt); ?>" />
+                        <input id="dtCreaArt" name="dtCreaArt" class="form-control" type="text" disabled value="<?php echo($dtCreaArt); ?>" />
 
                     <label for="dtMajArt">Date de Modification</label>
                         <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />
-                        <input id="dtMajArt" name="dtMajArt" class="form-control" type="text" value="<?php echo($dtMajArt); ?>" />
+                        <input id="dtMajArt" name="dtMajArt" class="form-control" type="text" disabled value="<?php echo($dtMajArt); ?>" />
                         
                     <label for="libChapoArt">Chapeau</label>
                         <input id="numArt" name="numArt" class="form-control" style="display: none" type="text" value="<?php echo($numArt); ?>" readonly="readonly" />

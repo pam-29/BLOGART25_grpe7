@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?><!DOCTYPE html>
 <html lang="fr-FR">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +11,8 @@
     <!-- Bootstrap CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="shortcut icon" type="image/x-icon" href="src/images/article.png" />
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <?php
 //load config
@@ -36,6 +40,7 @@ require_once 'config.php';
       <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Rechercher sur le site…" aria-label="Search" >
       </form>
+      <a class="btn btn-danger m-1" href="/api/security/disconnect.php" role="button">Déconnexion</a>
       <a class="btn btn-primary m-1" href="/views/backend/security/login.php" role="button">Login</a>
       <a class="btn btn-dark m-1" href="/views/backend/security/signup.php" role="button">Sign up</a>
     </div>
