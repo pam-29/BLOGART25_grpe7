@@ -47,7 +47,6 @@ DEFAULT COLLATE utf8_general_ci ;  --
 -- SHOW VARIABLES;					  -- Voir les paramètres de la BD
 
 -- Then we add a user to the database
--- Certains windows : aot (2 lignes ci-dessous)
 
 
 -- Flush / Init all privileges

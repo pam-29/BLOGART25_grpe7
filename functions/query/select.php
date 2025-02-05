@@ -7,6 +7,7 @@ function sql_select($table, $attributs = '*', $where = null, $group = null, $ord
     if(!$DB){
         sql_connect();
     }
+
     //no prepare query for PDO
     $query = "SELECT " . $attributs . " FROM $table";
     if($where){
@@ -37,5 +38,4 @@ function sql_select($table, $attributs = '*', $where = null, $group = null, $ord
 
     //return result
     return $result;
-    
 }
