@@ -2,13 +2,9 @@
 include '../../header.php';
 if (empty($_SESSION)) {
     header("Location: security/login.php");
-} elseif ($_SESSION['statut'] == '2' || $_SESSION['statut'] == '3') {
-    $_SESSION['flash']['danger'] = 'Vous êtes pas administrateur du site !';
-    header("Location: ../../index.php");
 }
 ?>
 
-<!-- Bootstrap admin dashboard template -->
 <div>
     <hr class="my-3">
     <div style="color: black; font-size: 30px; font-family: Montserrat; font-weight: 400; padding-left: 3rem ;word-wrap: break-word">Liens permettant d'administrer le Blog d'Articles</div>    
@@ -73,8 +69,8 @@ if (empty($_SESSION)) {
                         <tr>
                             <td>Commentaires</td>
                             <td>
-                                <a href="/views/backend/comments/list.php" class="btn btn-primary disabled">List</a>
-                                <a href="/views/backend/comments/create.php" class="btn btn-success disabled">Create</a>
+                                <a href="/views/backend/comments/list.php" class="btn btn-primary">List</a>
+                                <a href="/views/backend/comments/create.php" class="btn btn-success">Create</a>
                                 <a href="/views/backend/comments/edit.php" class="btn btn-warning disabled">Edit</a>
                                 <a href="/views/backend/comments/delete.php" class="btn btn-danger disabled">Delete</a>
                             </td>
