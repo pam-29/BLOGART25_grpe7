@@ -6,7 +6,6 @@ session_start();
 $password = $_POST["password"];
 $pseudo = $_POST["pseudo"];
 
-
 $connexion = sql_select('MEMBRE', "*", "pseudoMemb = '$pseudo'");
 
 var_dump($connexion);
